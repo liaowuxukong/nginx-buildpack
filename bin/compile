@@ -52,7 +52,7 @@ wget  $compile_tomcat_download
 tomcat_name=$(basename $compile_tomcat_download)
 tar zxvf $tomcat_name 1>/dev/null
 mv ${tomcat_name%.tar.gz} tomcat
-rm tomcat_name
+rm $tomcat_name
 
 
 
