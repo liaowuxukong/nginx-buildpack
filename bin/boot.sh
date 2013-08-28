@@ -16,7 +16,9 @@ export APP_ROOT=$HOME
 
 echo "print $HOME"
 ls -al $HOME
-
+echo -e "\n"
+echo "print $HOME/public"
+ls -al $HOME/public
 conf_file=$APP_ROOT/nginx/conf/nginx.conf
 if [ -f $APP_ROOT/public/nginx.conf ]
 then
