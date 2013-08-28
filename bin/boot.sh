@@ -14,23 +14,6 @@
 
 export APP_ROOT=$HOME
 
-echo "print $HOME"
-ls -al $HOME
-echo -e "\n"
-echo "print $HOME/public"
-ls -al $HOME/public
-conf_file=$APP_ROOT/nginx/conf/nginx.conf
-if [ -f $APP_ROOT/public/nginx.conf ]
-then
-  conf_file=$APP_ROOT/public/nginx.conf
-fi
-
-mv $conf_file $APP_ROOT/nginx/conf/orig.conf
-erb $APP_ROOT/nginx/conf/orig.conf > $APP_ROOT/nginx/conf/nginx.conf
-
-# ------------------------------------------------------------------------------------------------
-
-(tail -f -n 0 $APP_ROOT/nginx/logs/*.log &)
-exec $APP_ROOT/nginx/sbin/nginx -p $APP_ROOT/nginx -c $APP_ROOT/nginx/conf/nginx.conf
+exec $APP_ROOT/tomcat/bin/startup.sh
 
 # ------------------------------------------------------------------------------------------------
