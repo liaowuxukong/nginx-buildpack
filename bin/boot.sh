@@ -28,7 +28,7 @@ java -version > 0
 
 echo "start tomcat"
 tomcatFold="tomcat path: $APP_ROOT/$tomcatFold/bin/startup.sh"
-exec $APP_ROOT/$tomcatFold/bin/startup.sh
+exec  $APP_ROOT/$tomcatFold/bin/startup.sh
 
 ps -ef | grep "tomcat" > 0
 curl localhost:8888
