@@ -42,7 +42,7 @@ cd $compile_build_dir
 # ------------------------------------------------------------------------------------------------
 
 #echo "-----> Doing work with $(basename ${compile_tomcat_download%.tar.gz}) son."
-#tomcat_name="apache-tomcat-7.0.42.tar.gz"
+tomcat_name="apache-tomcat-7.0.42.tar.gz"
 #curl -s --max-time 60 $compile_tomcat_download |tar xz
 #mv ${tomcat_name%.tar.gz} tomcat
 #if [ -f server.xml ]
