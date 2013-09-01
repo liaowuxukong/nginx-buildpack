@@ -30,11 +30,12 @@ chmod 777 -R $APP_ROOT/$tomcatFold
 echo "tomcat path: $APP_ROOT/$tomcatFold/bin/startup.sh"
 ls -al $tomcatFold
 
+
+echo "JRE_HOME = $JRE_HOME"
+
 echo "start tomcat"
 exec $APP_ROOT/$tomcatFold/bin/startup.sh
 
-echo "JRE_HOME = $JRE_HOME"
-echo "tomcat start"
 
 exec ps -ef | grep "tomcat" > 0
 #exec curl localhost:8888
