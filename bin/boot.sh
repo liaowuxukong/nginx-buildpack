@@ -38,5 +38,9 @@ bash $APP_ROOT/$tomcatFold/bin/startup.sh
 echo "start tomcat end"
 
 ps -ef | grep "tomcat"
+echo
+echo
+cat $APP_ROOT/$tomcatFold/logs/*
 
 # ------------------------------------------------------------------------------------------------
+
