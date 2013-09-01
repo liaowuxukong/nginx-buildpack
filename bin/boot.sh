@@ -18,6 +18,15 @@ export APP_ROOT=$HOME
 echo "print $APP_ROOT"
 ls $APP_ROOT
 
+tomcat_name="apache-tomcat-7.0.42.tar.gz"
+echo "-----> unzip $tomcatzip"
+#tomcat_name=$(basename $compile_tomcat_download)
+tar zxvf $tomcat_name 1>/dev/null
+mv ${tomcat_name%.tar.gz} tomcat
+rm $tomcat_name
+echo "-----> unzip tomcat finish"
+
+
 jdkzip="jdk-7u25-linux-x64.tar.gz"
 echo "-----> unzip $jdkzip "
 jdk="jdk1.7.0_25"
