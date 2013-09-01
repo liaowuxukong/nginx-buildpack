@@ -16,19 +16,19 @@
 export APP_ROOT=$HOME
 
 echo "print $APP_ROOT"
-ls $APP_ROOT
+ls -al $APP_ROOT
 
 echo "set java environment"
-jdkFold="jdk1.7.0_25"
-export JAVA_HOME=$APP_ROOT/$jdkFold
-export CLASSPATH=.:$CLASSPATH:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
-export PATH=$PATH:$JAVA_HOME/bin
-export JRE_HOME=$JAVA_HOME/jre
+
+jreFold="jre1.7.0_25"
+export JRE_HOME=$APP_ROOT/$jreFold
+export PATH=$PATH:$JRE_HOME/bin
 
 java -version > 0
 
 echo "start tomcat"
-sh $APP_ROOT/tomcat/bin/startup.sh
+tomcatFold="tomcat"
+$APP_ROOT/$tomcatFold/bin/startup.sh
 
 ps -ef | grep "tomcat" > 0
 

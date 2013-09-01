@@ -50,12 +50,12 @@ mv ${tomcat_name%.tar.gz} tomcat
 rm $tomcat_name
 echo "-----> unzip tomcat finish"
 
-
-jdkzip="jdk-7u25-linux-x64.tar.gz"
+jdkzip="jre-7u25-linux-x64.tar.gz"
 echo "-----> unzip $jdkzip "
 tar zxvf $jdkzip 1>/dev/null
 rm $jdkzip
 echo "-----> unzip jdk finish"
+
 
 # ------------------------------------------------------------------------------------------------
 
