@@ -18,6 +18,21 @@ export APP_ROOT=$HOME
 echo "print $APP_ROOT"
 ls $APP_ROOT
 
-#exec $APP_ROOT/tomcat/bin/startup.sh
+jdkzip="jdk-7u25-linux-x64.tar.gz"
+echo "-----> unzip $jdkzip "
+jdk="jdk1.7.0_25"
+tar zxvf $jdkzip 1>/dev/null
+rm $jdkzip
+echo "-----> unzip jdk finish"
+
+echo "set java environment"
+jdkFold="jdk1.7.0_25"
+export JAVA_HOME=$APP_ROOT/$jdkFold
+export CLASSPATH=.:$CLASSPATH:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
+export PATH=$PATH:$JAVA_HOME/bin
+export JRE_HOME=$JAVA_HOME/jre
+
+echo "start tomcat"
+exec $APP_ROOT/tomcat/bin/startup.sh
 
 # ------------------------------------------------------------------------------------------------
