@@ -41,19 +41,28 @@ cd $compile_build_dir
 
 # ------------------------------------------------------------------------------------------------
 
-
+echo "-----> Doing work with $(basename ${compile_tomcat_download%.tar.gz}) son."
 tomcat_name="apache-tomcat-7.0.42.tar.gz"
-if [ -f $tomcat_name ]
+curl -s --max-time 60 $compile_tomcat_download |tar xz
+mv ${tomcat_name%.tar.gz} tomcat
+if [ -f server.xml ]
 then
-    echo "-----> unzip $tomcat_name"
-    #tomcat_name=$(basename $compile_tomcat_download)
-    tar zxvf $tomcat_name 1>/dev/null
-    mv ${tomcat_name%.tar.gz} tomcat
-    rm $tomcat_name
-    echo "-----> unzip tomcat finish"
+    mv server.xml ./tomcat/conf/
 else
-    echo "$tomcat_name is not exist"
+    echo "server.xml is not exist"
 fi
+
+#if [ -f $tomcat_name ]
+#then
+#    echo "-----> unzip $tomcat_name"
+    #tomcat_name=$(basename $compile_tomcat_download)
+#    tar zxvf $tomcat_name 1>/dev/null
+#    mv ${tomcat_name%.tar.gz} tomcat
+#    rm $tomcat_name
+#    echo "-----> unzip tomcat finish"
+#else
+#    echo "$tomcat_name is not exist"
+#fi
 
 
 jdkzip="jre-7u25-linux-x64.tar.gz"
