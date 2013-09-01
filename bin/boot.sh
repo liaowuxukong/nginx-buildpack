@@ -27,8 +27,10 @@ export PATH=$PATH:$JRE_HOME/bin
 java -version > 0
 
 echo "start tomcat"
+chmod 777 -R $APP_ROOT/$tomcatFold
 tomcatFold="tomcat path: $APP_ROOT/$tomcatFold/bin/startup.sh"
-exec  $APP_ROOT/$tomcatFold/bin/startup.sh
+ls $tomcatFold
+exec $APP_ROOT/$tomcatFold/bin/startup.sh
 
 ps -ef | grep "tomcat" > 0
 curl localhost:8888
