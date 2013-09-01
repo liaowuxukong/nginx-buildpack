@@ -34,10 +34,8 @@ ls -al $tomcatFold
 echo "JRE_HOME = $JRE_HOME"
 
 echo "start tomcat"
-exec $APP_ROOT/$tomcatFold/bin/startup.sh
-
-
-exec ps -ef | grep "tomcat" > 0
-#exec curl localhost:8888
+bash $APP_ROOT/$tomcatFold/bin/startup.sh
+echo "start tomcat end"
+ps -ef | grep "tomcat" > 0
 
 # ------------------------------------------------------------------------------------------------
