@@ -33,7 +33,7 @@ ls -al $tomcatFold
 echo "start tomcat"
 exec $APP_ROOT/$tomcatFold/bin/startup.sh
 
-
+echo "JRE_HOME = $JRE_HOME"
 echo "tomcat start"
 
 exec ps -ef | grep "tomcat" > 0
