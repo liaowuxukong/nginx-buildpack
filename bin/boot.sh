@@ -26,7 +26,7 @@ export PATH=$PATH:$JRE_HOME/bin
 
 java -version > 0
 tomcatFold="tomcat"
-exec chmod 777 -R $APP_ROOT/$tomcatFold
+chmod 777 -R $APP_ROOT/$tomcatFold
 echo "tomcat path: $APP_ROOT/$tomcatFold/bin/startup.sh"
 ls -al $tomcatFold
 
