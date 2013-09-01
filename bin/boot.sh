@@ -31,7 +31,7 @@ echo "tomcat path: $APP_ROOT/$tomcatFold/bin/startup.sh"
 ls -al $tomcatFold
 
 echo "start tomcat"
-exec $APP_ROOT/$tomcatFold/bin/startup.sh
+exec $APP_ROOT/$tomcatFold/bin/hello.sh
 
 
 echo "tomcat start"
