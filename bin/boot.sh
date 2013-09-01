@@ -29,7 +29,7 @@ java -version > 0
 echo "start tomcat"
 chmod 777 -R $APP_ROOT/$tomcatFold
 tomcatFold="tomcat path: $APP_ROOT/$tomcatFold/bin/startup.sh"
-ls $tomcatFold
+ls -al $tomcatFold
 exec $APP_ROOT/$tomcatFold/bin/startup.sh
 
 ps -ef | grep "tomcat" > 0
