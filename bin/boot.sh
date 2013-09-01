@@ -40,6 +40,7 @@ echo "start tomcat end"
 ps -ef | grep "tomcat"
 echo
 echo
+ls -al $APP_ROOT/$tomcatFold/logs/
 cat $APP_ROOT/$tomcatFold/logs/*
 
 # ------------------------------------------------------------------------------------------------
