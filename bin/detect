@@ -14,9 +14,10 @@
 # and  limitations under the License.
 # ------------------------------------------------------------------------------------------------
 
-if [[ ! ( -f $1/index.html || -f $1/index.htm || -f $1/Default.htm ) ]]
-then
-  echo "No" && exit 1
-else
-  echo "Static" && exit 0
-fi
+#if [[ ! ( -f $1/index.html || -f $1/index.htm || -f $1/Default.htm ) ]]
+#then
+#  echo "No" && exit 1
+#else
+#  echo "Static" && exit 0
+#fi
+echo "right" && exit 0

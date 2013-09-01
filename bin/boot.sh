@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 # ------------------------------------------------------------------------------------------------
 # Copyright 2013 Jordon Bedwell.
 # Apache License.
@@ -14,6 +15,9 @@
 
 export APP_ROOT=$HOME
 
-exec $APP_ROOT/tomcat/bin/startup.sh
+echo "print $APP_ROOT"
+ls $APP_ROOT
+
+#exec $APP_ROOT/tomcat/bin/startup.sh
 
 # ------------------------------------------------------------------------------------------------
