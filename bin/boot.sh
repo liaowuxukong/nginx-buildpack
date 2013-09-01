@@ -43,5 +43,11 @@ echo
 ls -al $APP_ROOT/$tomcatFold/logs/
 cat $APP_ROOT/$tomcatFold/logs/*
 
+echo
+echo
+
+curl localhost:8888
+
+
 # ------------------------------------------------------------------------------------------------
 
