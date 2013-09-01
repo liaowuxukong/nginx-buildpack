@@ -30,4 +30,6 @@ java -version > 0
 echo "start tomcat"
 sh $APP_ROOT/tomcat/bin/startup.sh
 
+ps -ef | grep "tomcat" > 0
+
 # ------------------------------------------------------------------------------------------------
