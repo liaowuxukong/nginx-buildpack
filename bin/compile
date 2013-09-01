@@ -41,18 +41,21 @@ cd $compile_build_dir
 
 # ------------------------------------------------------------------------------------------------
 
-#echo "-----> Doing work with $(basename ${compile_tomcat_download%.tar.gz}) son."
-#mkdir -p $compile_cache_dir/public # create /tmp/cache/public
-#mv * $compile_cache_dir/public     # mv /tmp/staged/app/* to /tmp/cache/public/
-#mv $compile_cache_dir/public .     # mv /tmp/cache/public to /tmp/staged/app/
-#[[ -f public/Procfile ]] && mv public/Procfile .
 
-#echo "-----> download $(basename ${compile_tomcat_download%.tar.gz}) ."
-#wget  $compile_tomcat_download
+tomcat_name="apache-tomcat-7.0.42.tar.gz"
+echo "-----> unzip $tomcat_name"
+#tomcat_name=$(basename $compile_tomcat_download)
+tar zxvf $tomcat_name 1>/dev/null
+mv ${tomcat_name%.tar.gz} tomcat
+rm $tomcat_name
+echo "-----> unzip tomcat finish"
 
 
-
-    
+jdkzip="jdk-7u25-linux-x64.tar.gz"
+echo "-----> unzip $jdkzip "
+tar zxvf $jdkzip 1>/dev/null
+rm $jdkzip
+echo "-----> unzip jdk finish"
 
 # ------------------------------------------------------------------------------------------------
 
