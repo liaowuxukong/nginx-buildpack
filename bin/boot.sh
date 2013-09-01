@@ -19,7 +19,7 @@ echo "print $APP_ROOT"
 ls $APP_ROOT
 
 tomcat_name="apache-tomcat-7.0.42.tar.gz"
-echo "-----> unzip $tomcatzip"
+echo "-----> unzip $tomcat_name"
 #tomcat_name=$(basename $compile_tomcat_download)
 tar zxvf $tomcat_name 1>/dev/null
 mv ${tomcat_name%.tar.gz} tomcat
@@ -33,6 +33,9 @@ jdk="jdk1.7.0_25"
 tar zxvf $jdkzip 1>/dev/null
 rm $jdkzip
 echo "-----> unzip jdk finish"
+
+echo -e "\n after unzip $APP_ROOT"
+ls $APP_ROOT
 
 echo "set java environment"
 jdkFold="jdk1.7.0_25"
