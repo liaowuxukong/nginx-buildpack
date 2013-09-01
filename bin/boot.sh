@@ -33,6 +33,9 @@ ls -al $tomcatFold
 echo "start tomcat"
 exec $APP_ROOT/$tomcatFold/bin/startup.sh
 
+
+echo "tomcat start"
+
 exec ps -ef | grep "tomcat" > 0
 #exec curl localhost:8888
 
