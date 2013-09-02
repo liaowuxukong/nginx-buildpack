@@ -24,7 +24,7 @@ jreFold="jre1.7.0_25"
 export JRE_HOME=$APP_ROOT/$jreFold
 export PATH=$PATH:$JRE_HOME/bin
 
-java -version > 0
+java -version 
 tomcatFold="tomcat"
 chmod 777 -R $APP_ROOT/$tomcatFold
 echo "tomcat path: $APP_ROOT/$tomcatFold/bin/startup.sh"
@@ -32,6 +32,8 @@ ls -al $tomcatFold
 
 
 echo "JRE_HOME = $JRE_HOME"
+export TOMCAT_HOME=$APP_ROOT/$tomcatFold
+export CATALINA_HOME=$APP_ROOT/$tomcatFold
 
 echo "start tomcat"
 bash $APP_ROOT/$tomcatFold/bin/startup.sh
