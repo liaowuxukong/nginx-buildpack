@@ -44,7 +44,7 @@ export TOMCAT_HOME=$APP_ROOT/$tomcatFold
 export CATALINA_HOME=$APP_ROOT/$tomcatFold
 
 echo "start tomcat"
-bash $APP_ROOT/$tomcatFold/bin/startup.sh
+bash ./tomcat/bin/startup.sh
 echo "start tomcat end"
 
 #ps -ef 
