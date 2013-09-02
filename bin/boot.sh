@@ -13,11 +13,6 @@
 # and  limitations under the License.
 # ------------------------------------------------------------------------------------------------
 
-echo "1 = $1"
-echo "2 = $2"
-echo "3 = $3"
-
-
 
 APP_ROOT=$(cd $(dirname $0) && pwd)
 echo "print /home/"
@@ -29,8 +24,8 @@ ls -al $APP_ROOT
 echo "set java environment"
 
 jreFold="jre1.7.0_25"
-export JRE_HOME=$APP_ROOT/$jreFold
-export PATH=$PATH:$JRE_HOME/bin
+#export JRE_HOME=$APP_ROOT/$jreFold
+#export PATH=$PATH:$JRE_HOME/bin
 
 java -version 
 tomcatFold="tomcat"
@@ -40,8 +35,8 @@ ls -al $tomcatFold
 
 
 echo "JRE_HOME = $JRE_HOME"
-export TOMCAT_HOME=$APP_ROOT/$tomcatFold
-export CATALINA_HOME=$APP_ROOT/$tomcatFold
+#export TOMCAT_HOME=$APP_ROOT/$tomcatFold
+#export CATALINA_HOME=$APP_ROOT/$tomcatFold
 
 echo "start tomcat"
 bash ./tomcat/bin/startup.sh
