@@ -14,6 +14,9 @@
 # ------------------------------------------------------------------------------------------------
 
 export APP_ROOT=$HOME
+echo
+ifconfig
+echo
 
 echo "print /home/"
 ls -al /home/
