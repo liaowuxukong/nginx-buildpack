@@ -15,6 +15,9 @@
 
 export APP_ROOT=$HOME
 
+echo "print /home/"
+ls -al /home/
+
 echo "print $APP_ROOT"
 ls -al $APP_ROOT
 
