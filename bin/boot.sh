@@ -16,7 +16,7 @@ echo "-------->"
 whoami
 echo
 #APP_ROOT=$(cd $(dirname $0) && pwd)
-APP_ROOT=$PWD/app
+APP_ROOT=$PWD
 echo "print /home/"
 ls -al /home/
 
