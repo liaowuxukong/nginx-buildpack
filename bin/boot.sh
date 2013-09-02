@@ -13,15 +13,11 @@
 # and  limitations under the License.
 # ------------------------------------------------------------------------------------------------
 
-export APP_ROOT=$HOME
-echo
-ifconfig
-echo
-
+APP_ROOT=$(cd $(dirname $0) && pwd)
 echo "print /home/"
 ls -al /home/
 
-echo "print $APP_ROOT"
+echo "print APP_HOME=$APP_ROOT"
 ls -al $APP_ROOT
 
 echo "set java environment"
