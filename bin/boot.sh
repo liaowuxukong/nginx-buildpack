@@ -13,6 +13,12 @@
 # and  limitations under the License.
 # ------------------------------------------------------------------------------------------------
 
+echo "1 = $1"
+echo "2 = $2"
+echo "3 = $3"
+
+
+
 APP_ROOT=$(cd $(dirname $0) && pwd)
 echo "print /home/"
 ls -al /home/
