@@ -39,18 +39,18 @@ ls -al $tomcatFold
 echo "JRE_HOME = $JRE_HOME"
 
 echo "start tomcat"
-bash ./tomcat/bin/startup.sh
+bash ./tomcat/bin/catalina.sh run
 echo "start tomcat end"
 
 #ps -ef 
 echo
-#ls -al $APP_ROOT/$tomcatFold/logs/
-#cat $APP_ROOT/$tomcatFold/logs/*
+ls -al $APP_ROOT/$tomcatFold/logs/
+cat $APP_ROOT/$tomcatFold/logs/*
 
 echo
 echo
 
-python boot.py
+#python boot.py
 
 
 
