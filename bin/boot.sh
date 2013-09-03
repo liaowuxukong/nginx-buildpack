@@ -26,14 +26,14 @@ ls -al $APP_ROOT
 echo "set java environment"
 
 jreFold="jre1.7.0_25"
-export JRE_HOME=$APP_ROOT/$jreFold
-export PATH=$PATH:$JRE_HOME/bin
+#export JRE_HOME=$APP_ROOT/$jreFold
+#export PATH=$PATH:$JRE_HOME/bin
 
-java -version 
-tomcatFold="tomcat"
-chmod 777 -R $APP_ROOT/$tomcatFold
-echo "tomcat path: $APP_ROOT/$tomcatFold/bin/startup.sh"
-ls -al $tomcatFold
+#java -version 
+#tomcatFold="tomcat"
+#chmod 777 -R $APP_ROOT/$tomcatFold
+#echo "tomcat path: $APP_ROOT/$tomcatFold/bin/startup.sh"
+#ls -al $tomcatFold
 
 
 echo "JRE_HOME = $JRE_HOME"
@@ -44,13 +44,12 @@ echo "start tomcat end"
 
 #ps -ef 
 echo
-ls -al $APP_ROOT/$tomcatFold/logs/
-cat $APP_ROOT/$tomcatFold/logs/*
+#ls -al $APP_ROOT/$tomcatFold/logs/
+#cat $APP_ROOT/$tomcatFold/logs/*
 
 echo
 echo
 
-#curl 127.0.0.1:8888
 
 
 # ------------------------------------------------------------------------------------------------
