@@ -13,7 +13,7 @@ if len(sys.argv) == 2:
 else:
     print 'Service files from [%s]' % os.getcwd()
 port = int(os.environ.get('VCAP_APP_PORT', 8080)
-print "port--->"
+print 'port--->'
 print port
 
 httpd = SocketServer.TCPServer(
