@@ -39,7 +39,7 @@ ls -al $tomcatFold
 echo "JRE_HOME = $JRE_HOME"
 
 echo "start tomcat"
-#bash ./tomcat/bin/startup.sh
+bash ./tomcat/bin/startup.sh
 echo "start tomcat end"
 
 #ps -ef 
