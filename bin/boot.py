@@ -7,7 +7,8 @@ import SocketServer
 import os
 import sys
 
-port = int(os.environ.get('VCAP_APP_PORT', 8080)
+port = int(os.environ.get('VCAP_APP_PORT', 8080))
+print port
 if len(sys.argv) == 2:
     print 'Serving files from [%s]' % sys.argv[1]
     os.chdir(sys.argv[1])
