@@ -20,4 +20,4 @@
 #else
 #  echo "Static" && exit 0
 #fi
-echo "right" && exit 0
+echo "tomcat" && exit 0

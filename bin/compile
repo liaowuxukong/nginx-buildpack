@@ -78,4 +78,4 @@ tomcat_name="apache-tomcat-7.0.42.tar.gz"
 
 # ------------------------------------------------------------------------------------------------
 
-cp $compile_buildpack_bin/boot.sh .
+cp $compile_buildpack_bin/boot.py .
