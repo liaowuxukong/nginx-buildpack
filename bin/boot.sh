@@ -15,25 +15,25 @@
 echo "-------->"
 whoami
 echo
-#APP_ROOT=$(cd $(dirname $0) && pwd)
+APP_ROOT=$(cd $(dirname $0) && pwd)
 APP_ROOT=$PWD
 echo "print /home/"
 ls -al /home/
 
-echo "print APP_HOME=$APP_ROOT"
+echo "print APP_ROOT=$APP_ROOT"
 ls -al $APP_ROOT
 
 echo "set java environment"
 
 jreFold="jre1.7.0_25"
-#export JRE_HOME=$APP_ROOT/$jreFold
-#export PATH=$PATH:$JRE_HOME/bin
+export JRE_HOME=$APP_ROOT/$jreFold
+export PATH=$PATH:$JRE_HOME/bin
 
-#java -version 
-#tomcatFold="tomcat"
-#chmod 777 -R $APP_ROOT/$tomcatFold
-#echo "tomcat path: $APP_ROOT/$tomcatFold/bin/startup.sh"
-#ls -al $tomcatFold
+java -version 
+tomcatFold="tomcat"
+chmod 777 -R $APP_ROOT/$tomcatFold
+echo "tomcat path: $APP_ROOT/$tomcatFold/bin/startup.sh"
+ls -al $tomcatFold
 
 
 echo "JRE_HOME = $JRE_HOME"
