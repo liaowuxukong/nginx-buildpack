@@ -15,12 +15,12 @@
 echo "-------->"
 whoami
 echo
-APP_ROOT=$(cd $(dirname $0) && pwd)
+#APP_ROOT=$(cd $(dirname $0) && pwd)
 APP_ROOT=$PWD
 echo "print /home/"
 ls -al /home/
 
-echo "print APP_ROOT=$APP_ROOT"
+echo "print APP_HOME=$APP_ROOT"
 ls -al $APP_ROOT
 
 echo "set java environment"
@@ -39,21 +39,18 @@ ls -al $tomcatFold
 echo "JRE_HOME = $JRE_HOME"
 
 echo "start tomcat"
-bash ./tomcat/bin/catalina.sh run
+#bash ./tomcat/bin/startup.sh
 echo "start tomcat end"
 
 #ps -ef 
 echo
-echo "$APP_ROOT/$tomcatFold/logs/"
 ls -al $APP_ROOT/$tomcatFold/logs/
-
 cat $APP_ROOT/$tomcatFold/logs/*
 
 echo
 echo
 
-#python boot.py
-
+#curl 127.0.0.1:8888
 
 
 # ------------------------------------------------------------------------------------------------

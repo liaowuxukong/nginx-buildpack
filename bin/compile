@@ -55,6 +55,7 @@ tomcat_name="apache-tomcat-7.0.42.tar.gz"
 if [ -f $tomcat_name ]
 then
     echo "-----> unzip $tomcat_name"
+    #tomcat_name=$(basename $compile_tomcat_download)
     tar zxvf $tomcat_name 1>/dev/null
     mv ${tomcat_name%.tar.gz} tomcat
     rm $tomcat_name
@@ -78,5 +79,4 @@ fi
 
 # ------------------------------------------------------------------------------------------------
 
-cp $compile_buildpack_bin/boot.py .
 cp $compile_buildpack_bin/boot.sh .
