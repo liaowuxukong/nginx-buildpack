@@ -44,7 +44,9 @@ echo "start tomcat end"
 
 #ps -ef 
 echo
+echo "$APP_ROOT/$tomcatFold/logs/"
 ls -al $APP_ROOT/$tomcatFold/logs/
+
 cat $APP_ROOT/$tomcatFold/logs/*
 
 echo
