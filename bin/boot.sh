@@ -39,7 +39,7 @@ ls -al $tomcatFold
 echo "JRE_HOME = $JRE_HOME"
 
 echo "start tomcat"
-bash ./tomcat/bin/startup.sh
+#bash ./tomcat/bin/startup.sh
 echo "start tomcat end"
 
 #ps -ef 
@@ -50,7 +50,7 @@ cat $APP_ROOT/$tomcatFold/logs/*
 echo
 echo
 
-curl 127.0.0.1:8888
+#curl 127.0.0.1:8888
 
 
 # ------------------------------------------------------------------------------------------------
