@@ -38,8 +38,19 @@ ls -al $tomcatFold
 
 echo "JRE_HOME = $JRE_HOME"
 
+echo "change server.xml"
+
+PORT=$VCAP_APP_PORT
+configFile=$APP_ROOT/$tomcatFold/conf/server.xml
+org="<Connector port=\"8080\" protocol=\"HTTP/1.1\""
+ech $org
+change="<Connector port=\"$PORT\" protocol=\"HTTP/1.1\""
+echo $change
+
+sed -i "s*$org*$change*" $configFile
+
 echo "start tomcat"
-#bash ./tomcat/bin/startup.sh
+bash $APP_ROOT/$tomcatFold/bin/catalina.sh run
 echo "start tomcat end"
 
 #ps -ef 
@@ -50,7 +61,6 @@ cat $APP_ROOT/$tomcatFold/logs/*
 echo
 echo
 
-#curl 127.0.0.1:8888
 
 
 # ------------------------------------------------------------------------------------------------
