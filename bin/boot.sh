@@ -42,9 +42,11 @@ echo "change server.xml"
 
 PORT=$VCAP_APP_PORT
 configFile=$APP_ROOT/$tomcatFold/conf/server.xml
-org="<Connector port=\"8080\" protocol=\"HTTP/1.1\""
-ech $org
-change="<Connector port=\"$PORT\" protocol=\"HTTP/1.1\""
+org="port=\"8080\" protocol=\"HTTP/1.1\""
+#org="<Connector port=\"8080\" protocol=\"HTTP/1.1\""
+echo $org
+change="port=\"$PORT\" protocol=\"HTTP/1.1\""
+#change="<Connector port=\"$PORT\" protocol=\"HTTP/1.1\""
 echo $change
 
 sed -i "s*$org*$change*" $configFile
